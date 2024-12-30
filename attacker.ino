@@ -45,7 +45,8 @@ void loop() {
     double distance = (duration*.0343)/2;
     current_read = (distance <= 400) ? distance : current_read;
 
-
+    //print a string with the following format:
+    //"timestamp, distance, status of the attack"
     time_t t1 = micros() - time0;
     Serial.print(t1);
     Serial.print(", ");
